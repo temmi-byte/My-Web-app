@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-screen {
+  text-align: center;
+  background: white;
+  padding: 0.2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+input {
+  padding: 0.5rem;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #5f9ea0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}

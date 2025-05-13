@@ -1,0 +1,31 @@
+/* Light Mode (default) */
+:root {
+    --primary: #6c5ce7;
+    --primary-light: rgba(108, 92, 231, 0.1);
+    --bg-primary: #f5f6fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --toggle-bg: #e0e0e0;
+    --toggle-fg: #ffffff;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --primary: #6c5ce7;
+    --primary-light: rgba(108, 92, 231, 0.2);
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #f5f5f5;
+    --text-secondary: #b0b0b0;
+    --toggle-bg: #424242;
+    --toggle-fg: #f5f5f5;
+}
+
+/* Apply the variables */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* All your other elements should use these variables */

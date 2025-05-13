@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daily Feels - Mood History</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="history-container">
+        <!-- Header with back button -->
+        <header class="history-header">
+            <a href="dashboard.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1>Your Mood History</h1>
+        </header>
+
+        <!-- Time period selector -->
+        <div class="period-selector">
+            <button class="period-btn active" data-period="all">All Time</button>
+            <button class="period-btn" data-period="month">This Month</button>
+            <button class="period-btn" data-period="week">This Week</button>
+        </div>
+
+        <!-- Mood history chart -->
+        <div class="mood-chart-container">
+            <canvas id="moodChart"></canvas>
+        </div>
+
+        <!-- Detailed mood list -->
+        <div class="mood-list-container">
+            <h2>Recent Entries</h2>
+            <div class="mood-list" id="mood-entries">
+                <!-- Entries will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Chart.js for the graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mooddata.js"></script>
+    <script src="history.js"></script>
+</body>
+</html>

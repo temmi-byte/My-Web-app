@@ -1,0 +1,482 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.app-name {
+    color: #6c5ce7;
+    font-weight: 700;
+}
+
+.user-greeting {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Mood Prompt Card */
+.mood-prompt-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.mood-prompt-card h2 {
+    color: #4a4a4a;
+    margin-top: 0;
+}
+
+.mood-button {
+    display: inline-block;
+    background: #6c5ce7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.mood-button:hover {
+    background: #5649c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stat-card i {
+    font-size: 1.5rem;
+    color: #6c5ce7;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Navigation */
+.dashboard-nav {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border-radius: 15px;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.nav-item i {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #6c5ce7;
+}
+
+.nav-item:hover {
+    color: #6c5ce7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .bottom-nav i {
+    font-size: 20px;
+    color: rgb(143, 68, 187);
+  }
+
+  .bottom-nav i :hover {
+    color: #cedae9;
+  } 
+
+  /* Mood Patterns Card */
+.mood-patterns-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.pattern-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pattern-item i {
+    font-size: 1.5rem;
+    color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.pattern-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.pattern-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Insights Card */
+.insights-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.insight-emoji {
+    font-size: 1.2rem;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.insight-item p {
+    margin: 0;
+    flex: 1;
+}
+
+/* Base Styles */
+:root {
+    --primary: #6c5ce7;
+    --primary-light: rgba(108, 92, 231, 0.1);
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --bg-primary: #f5f6fa;
+    --bg-secondary: #ffffff;
+    --positive: #00b894;
+    --negative: #d63031;
+    --neutral: #fdcb6e;
+}
+
+.dashboard-container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header Section */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-greeting h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.user-greeting p {
+    margin: 5px 0 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.user-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+/* Summary Card */
+.summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mood-indicator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mood-emoji {
+    font-size: 2.5rem;
+}
+
+.mood-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.mood-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.mood-duration {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.summary-chart {
+    width: 120px;
+    height: 60px;
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 15px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.time-filter {
+    display: flex;
+    gap: 8px;
+}
+
+.time-btn {
+    background: none;
+    border: 1px solid var(--primary-light);
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.time-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Analytics Card */
+.analytics-card {
+    padding: 25px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.chart-title {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.chart-value {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.change {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.change.positive {
+    color: var(--positive);
+}
+
+.change.negative {
+    color: var(--negative);
+}
+
+/* Grid Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.grid-card {
+    padding: 15px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.card-value {
+    font-weight: 600;
+}
+
+/* Activity Card */
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-mood {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.activity-mood.happy {
+    color: var(--positive);
+}
+
+.activity-mood.sad {
+    color: var(--negative);
+}
+
+.activity-mood.neutral {
+    color: var(--neutral);
+}
+
+.activity-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.activity-value {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.activity-value.positive {
+    color: var(--positive);
+}
+
+.activity-value.negative {
+    color: var(--negative);
+}
+  

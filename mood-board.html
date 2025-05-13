@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Daily Feels - Quotes Section</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark-mode.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard">
+    <h2 id="greeting">Choose a mood  !</h2>
+
+    <div class="mood-grid">
+      <div class="mood-box happy" onclick="window.location.href='quotes.html?mood=happy'">
+        <i class="fas fa-face-smile"></i>
+        <p>Happy</p>
+      </div>
+      
+      <div class="mood-box sad" onclick="window.location.href='quotes.html?mood=sad'">
+        <i class="fas fa-face-sad-tear"></i>
+        <p>Sad</p>
+      </div>
+      
+      <div class="mood-box angry" onclick="window.location.href='quotes.html?mood=angry'">
+        <i class="fas fa-face-angry"></i>
+        <p>Angry</p>
+      </div>
+      
+      <div class="mood-box stressed" onclick="window.location.href='quotes.html?mood=stressed'">
+        <i class="fas fa-face-tired"></i>
+        <p>Stressed</p>
+      </div>
+      
+      <div class="mood-box calm" onclick="window.location.href='quotes.html?mood=calm'">
+        <i class="fas fa-face-meh-blank"></i>
+        <p>Calm</p>
+      </div>
+      
+      <div class="mood-box excited" onclick="window.location.href='quotes.html?mood=excited'">
+        <i class="fas fa-face-grin-stars"></i>
+        <p>Excited</p>
+      </div>
+
+<div class="mood-box anxious" onclick="window.location.href='quotes.html?mood=anxious'">
+  <i class="fas fa-face-dizzy"></i>
+  <p>Anxious</p>
+</div>
+
+<div class="mood-box content" onclick="window.location.href=' quotes.html?mood=content'">
+  <i class="fas fa-face-smile-beam"></i>
+  <p>Content</p>
+</div>
+
+<div class="mood-box lonely" onclick="window.location.href=' quotes.html?mood=lonely'">
+  <i class="fas fa-face-sad-cry"></i>
+  <p>Lonely</p>
+</div>
+
+<div class="mood-box grateful" onclick="window.location.href=' quotes.html?mood=grateful'">
+  <i class="fas fa-praying-hands"></i>
+  <p>Grateful</p>
+</div>
+    </div>
+
+    <div class="bottom-nav">
+     <a href="dashboard.html"><i class="fas fa-home"></i></a>
+     <a href="history.html"><i class="fas fa-history"></i></a>
+      <a href="mood-board.html"><i class="fas fa-quote-right"></i></a>
+      <a href="settings.html"><i class="fas fa-cog"></i></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<script>
+   function signIn() {
+    const username = document.getElementById("username").value.trim();
+    if (username) {
+      try {
+        localStorage.setItem("dailyFeelsUser", username);
+        // Double check that it was set
+        const storedUser = localStorage.getItem("dailyFeelsUser");
+
+        if (storedUser === username) {
+          window.location.href = "dashboard.html";
+        } else {
+          alert("There was an issue saving your name. Try again.");
+        }
+      } catch (e) {
+        console.error("Storage error", e);
+        alert("Something went wrong. Try again.");
+      }
+    } else {
+      alert("Please enter your name");
+    }
+  }
+
+</script>
+</body>
+</html>

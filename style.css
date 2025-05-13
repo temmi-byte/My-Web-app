@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 30%;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dashboard {
+    padding: 20px;
+  }
+  
+  #greeting {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mood-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 80px;
+  }
+  
+  .mood-box {
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .mood-box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Mood Colors */
+  .happy { background: #f2b900; }
+  .sad { background: #4a90e2; }
+  .angry { background: #e74c3c; }
+  .stressed { background: #8e44ad; }
+  .calm { background: #2ecc71; }
+  .excited { background: #e67e22; }
+  .anxious { background-color: rgb(226, 174, 90); }
+  .content { background-color: rgb(123, 223, 131); }
+  .lonely { background-color: rgb(130, 196, 243); }
+  .grateful { background-color: rgb(139, 161, 113); }
+
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .bottom-nav i {
+    font-size: 20px;
+    color: #444;
+  }
+
+  .bottom-nav a i :hover {
+    color: #cedae9;
+  } 
+  
+
+  /* Mood Patterns Card */
+.mood-patterns-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.pattern-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pattern-item i {
+    font-size: 1.5rem;
+    color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.pattern-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.pattern-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Insights Card */
+.insights-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.insight-emoji {
+    font-size: 1.2rem;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.insight-item p {
+    margin: 0;
+    flex: 1;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daily Feels - Your Mood Dashboard</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="user-greeting">
+            <h1>Welcome back, <span id="username">User</span></h1>
+            <p class="current-date" id="current-date"></p>
+        </div>
+        <div class="user-avatar">
+            <img src="images/avatar.jpg" alt="Profile" id="user-avatar">
+        </div>
+    </header>
+
+    <!-- Mood Summary Card -->
+    <div class="summary-card glass-card">
+        <div class="summary-content">
+            <h2>Current Mood Status</h2>
+            <div class="mood-indicator">
+                <div class="mood-emoji">😊</div>
+                <div class="mood-stats">
+                    <span class="mood-name">Happy</span>
+                    <span class="mood-duration">3 days streak</span>
+                </div>
+            </div>
+        </div>
+        <div class="summary-chart">
+            <canvas id="miniTrendChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Advanced Analytics Section -->
+    <div class="section-header">
+        <h2>Mood Liquidity</h2>
+        <div class="time-filter">
+            <button class="time-btn active">24H</button>
+            <button class="time-btn">7D</button>
+            <button class="time-btn">1M</button>
+            <button class="time-btn">1Y</button>
+        </div>
+    </div>
+
+    <!-- Main Analytics Chart -->
+    <div class="analytics-card glass-card">
+        <div class="chart-header">
+            <div class="chart-title">Mood Flow Index</div>
+            <div class="chart-value">72.5 <span class="change positive">+2.4%</span></div>
+        </div>
+        <canvas id="moodLiquidityChart"></canvas>
+    </div>
+
+    <!-- Mood Distribution -->
+    <div class="section-header">
+        <h2>Mood Portfolio</h2>
+    </div>
+    
+    <div class="grid-cards">
+        <div class="grid-card glass-card">
+            <div class="card-header">
+                <span class="card-label">Dominant Mood</span>
+                <span class="card-value">Happy</span>
+            </div>
+            <canvas id="dominanceChart"></canvas>
+        </div>
+        
+        <div class="grid-card glass-card">
+            <div class="card-header">
+                <span class="card-label">Volatility</span>
+                <span class="card-value">Medium</span>
+            </div>
+            <canvas id="volatilityChart"></canvas>
+        </div>
+        
+        <div class="grid-card glass-card">
+            <div class="card-header">
+                <span class="card-label">Positive/Negative</span>
+                <span class="card-value">65%/35%</span>
+            </div>
+            <canvas id="sentimentChart"></canvas>
+        </div>
+        
+        <div class="grid-card glass-card">
+            <div class="card-header">
+                <span class="card-label">Consistency</span>
+                <span class="card-value">82%</span>
+            </div>
+            <canvas id="consistencyChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="section-header">
+        <h2>Recent Transactions</h2>
+    </div>
+    
+    <div class="activity-card glass-card">
+        <div class="activity-item">
+            <div class="activity-mood happy">
+                <span>😊</span>
+                <span>Happy</span>
+            </div>
+            <div class="activity-details">
+                <span class="activity-time">Today, 10:30 AM</span>
+                <span class="activity-value positive">+12%</span>
+            </div>
+        </div>
+        <!-- More activity items -->
+    </div>
+</div>
+<div class="bottom-nav">
+        <a href="dashboard.html"><i class="fas fa-home"></i></a>
+        <a href="history.html"><i class="fas fa-history"></i></a>
+         <a href="mood-board.html"><i class="fas fa-quote-right"></i></a>
+         <a href="settings.html"><i class="fas fa-cog"></i></a>
+       </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
